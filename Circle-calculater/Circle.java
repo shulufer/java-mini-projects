@@ -3,13 +3,12 @@ public class Circle {
   Double circumference;
 
   Circle() {
-    radius = 10d;
-    circumference = 2 * Math.PI * radius;
+    this(10d);
   }
 
   Circle(Double newRadius) {
     radius = newRadius;
-    circumference = 2 * Math.PI * newRadius;
+    circumference = 2 * Math.PI * radius;
   }
 
   public void printInfo() {
