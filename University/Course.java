@@ -9,4 +9,7 @@ public class Course {
   private Professor professor;
   private Classroom classroom;
 
+  String printinfo() {
+    return ("Name of course");
+  }
 }
