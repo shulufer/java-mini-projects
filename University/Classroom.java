@@ -12,10 +12,6 @@ public class Classroom {
   }
 
 
-  public int getNo() {
-    return this.no;
-  }
-
   public void setNo(int no) {
     this.no = no;
   }
