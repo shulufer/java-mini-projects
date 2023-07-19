@@ -16,6 +16,10 @@ public class Classroom {
     this.no = no;
   }
 
+  public int getno() {
+    return this.no;
+  }
+
   public int getTime() {
     return this.time;
   }
