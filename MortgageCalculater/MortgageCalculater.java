@@ -25,6 +25,32 @@ public class MortgageCalculater {
     return monthlyPayment;
   }
 
+  public void extraPAymentCalculationAfterOneYear() {
+    principal -= yearlyPrepayments;
+    interestRate -= 0.09;
+  }
+
+  public double secondYearPaymentCalculator() {
+    double monthlyPayment;
+    extraPAymentCalculationAfterOneYear();
+    monthlyPayment = (principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
+    return monthlyPayment;
+  }
+
+  public void extraPAymentCalculationAftersecondYear() {
+    principal -= yearlyPrepayments;
+    interestRate -= 0.05;
+  }
+
+  public double allYearPaymentCalculator() {
+    double monthlyPayment;
+    extraPAymentCalculationAftersecondYear();
+    monthlyPayment = (principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
+    return monthlyPayment;
+  }
+
+
+
 
 
 

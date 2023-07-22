@@ -24,8 +24,19 @@ public class Calculater {
       MortgageCalculater user1 = new MortgageCalculater(value, terms, rate, extraPayment);
 
       double payment = user1.paymentCalculator();
-
       System.out.println(payment);
+
+      double secondYearpayment = user1.secondYearPaymentCalculator();
+      System.out.println(secondYearpayment);
+
+      double thirdYearpayment = user1.allYearPaymentCalculator();
+      System.out.println(thirdYearpayment);
+
+      double forthYearpayment = user1.allYearPaymentCalculator();
+      System.out.println(forthYearpayment);
+
+      double fifthYearpayment = user1.allYearPaymentCalculator();
+      System.out.println(fifthYearpayment);
 
       scan.close();
     }
