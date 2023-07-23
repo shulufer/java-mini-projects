@@ -7,6 +7,7 @@ public class MortgageCalculater {
   private int loanTerms;
   private double interestRate;
   private int yearlyPrepayments;
+  private int monthlyPayment;
 
 
 
@@ -17,9 +18,8 @@ public class MortgageCalculater {
     this.yearlyPrepayments = yearlyPrepayments;
   }
 
-  public double paymentCalculator(){
-    double monthlyPayment;
-    monthlyPayment = (principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
+  public int paymentCalculator(){
+    monthlyPayment = (int)(principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
     // monthlyPayment = principal * (((interestRate) * Math.pow((1 + interestRate), loanTerms))/(Math.pow(1 + interestRate, loanTerms) - 1));
     // monthlyPayment = ((principal / loanTerms) + ((principal / loanTerms) * interestRate));
     return monthlyPayment;
@@ -31,9 +31,8 @@ public class MortgageCalculater {
   }
 
   public double secondYearPaymentCalculator() {
-    double monthlyPayment;
     extraPAymentCalculationAfterOneYear();
-    monthlyPayment = (principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
+    monthlyPayment = (int)(principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
     return monthlyPayment;
   }
 
@@ -43,10 +42,29 @@ public class MortgageCalculater {
   }
 
   public double allYearPaymentCalculator() {
-    double monthlyPayment;
     extraPAymentCalculationAftersecondYear();
-    monthlyPayment = (principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
+    monthlyPayment = (int)(principal * (((interestRate / 1200) * (Math.pow((1+(interestRate / 1200)), loanTerms))) / (Math.pow(1+(interestRate / 1200), loanTerms) - 1)));
     return monthlyPayment;
+  }
+
+  public int monthIsEnd() {
+    int valueOFHouse = principal;
+    double payment = 0;
+    int month = 0;
+    int j = 1;
+    for (int i = 1; valueOFHouse >= payment; i++) {
+      payment += monthlyPayment;
+      System.out.println(i + " - " + (int)payment);
+      for (; i % 12 == 0;) {
+        payment += yearlyPrepayments;
+
+        System.out.println(j + " years extra - " + (int)payment);
+        j++;
+        break;
+      }
+    month = i;
+    }
+    return month;
   }
 
 
