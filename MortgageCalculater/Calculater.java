@@ -38,6 +38,10 @@ public class Calculater {
       double fifthYearpayment = user1.allYearPaymentCalculator();
       System.out.println(fifthYearpayment);
 
+
+
+      System.out.println("Mortgage ends " + user1.monthIsEnd() / 12.0  + " years");
+
       scan.close();
     }
 }
