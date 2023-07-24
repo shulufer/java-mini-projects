@@ -15,7 +15,5 @@ public class SieveOfEratosthenesMethodTest {
 
     scan.close();
 
-
-
   }
 }
