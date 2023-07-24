@@ -4,8 +4,6 @@ public class SieveOfEratosthenesMethod {
 
   private int maxNumber;
 
-
-
   public int getMaxNumber() {
     return this.maxNumber;
   }
@@ -14,36 +12,26 @@ public class SieveOfEratosthenesMethod {
     this.maxNumber = maxNumber;
   }
 
-
-
-
-
   public void pushNumberInAnArray(){
-    int[] primeNumberList = new int[maxNumber - 2];
+    int[] primeNumberList = new int[maxNumber];
+    int howManyNumberArePrime = 0;
     for (int i = 0; i < primeNumberList.length; i++) {
-      primeNumberList[i] = i + 2;
-      System.out.println(i + "*" + primeNumberList[i]);
+      primeNumberList[i] = i ;
     }
-  //   for (int i = 2; i < primeNumberList.length; i++) {
-  //     for (int j = 1; i * j < primeNumberList.length; j++) {
-  //       if(j == 1){
-  //         primeNumberList[i - 2] = i;
-  //       }
-  //     // System.out.println(primeNumberList[i] + " ");
-  //     }
-  //   }
-  //   for (int i : primeNumberList) {
-  //     if (primeNumberList[i] != 0) {
-  //       System.out.println(primeNumberList[i]);
-  //     }
-  //   }
-  // }
+    for (int i = 2; i < primeNumberList.length / 2; i++) {
+      for (int j = 2; i * j < primeNumberList.length; j++) {
+        primeNumberList[i * j] = 0;
 
-
-  // public void findThePrimeNumbers() {
-  //   for (int i : primeNumberList) {
-  //     System.out.println(i);
-  //   }
+      }
+    }
+    primeNumberList[1] = 0;
+    for (int i : primeNumberList) {
+      if (primeNumberList[i] != 0) {
+        System.out.println(i);
+        howManyNumberArePrime++;
+      }
+    }
+    System.out.println("There are " + howManyNumberArePrime + " number " + " up to " + maxNumber );
   }
 
 
