@@ -11,11 +11,11 @@ public class SieveOfEratosthenesMethodTest {
     System.out.println("Give me a number");
     user1.setMaxNumber(scan.nextInt());
 
-    user1.calculatePrimeNumbers(user1.getMaxNumber());
-
-    System.out.println(user1.getPrimeNumberArray());
-
+    user1.pushNumberInAnArray();
 
     scan.close();
+
+
+
   }
 }
