@@ -24,4 +24,8 @@ public class Author {
     this.book = book;
   }
 
+  public Book getBook() {
+    return book;
+  }
+
 }
