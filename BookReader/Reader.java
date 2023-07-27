@@ -49,9 +49,12 @@ public class Reader {
     this.sex = sex;
   }
 
-  public Book[] getReadBook() {
-    return this.readBook;
-
+  public String getReadBooks() {
+    String s = new String();
+    for (int i = 0; i < readBook.length; i++) {
+      s += (readBook[i] != null ? readBook[i] + "\n" : "") ;
+    }
+    return s;
   }
 
   public void setReadBook(Book[] readBook) {
@@ -73,7 +76,6 @@ public class Reader {
       " name=" + getName() + "\n" +
       " age=" + getAge() + "\n" +
       " sex=" + getSex() + "\n" +
-      " finished books=" + getReadBook() + "\n" +
       " howManyBook=" + getHowManyBook();
   }
 

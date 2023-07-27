@@ -10,5 +10,12 @@ public class ReaderApp {
     hakan.finishTheBook(hp1);
 
     System.out.println(hakan.toString());
+
+    Book hp2 = new Book("Harry Potter and the Chamber of Secrets", jKRowling, 400, "Fantastic", false, 0);
+
+    hakan.finishTheBook(hp2);
+
+    System.out.println(hakan.toString());
+    System.out.println(hakan.getReadBooks());
   }
 }
