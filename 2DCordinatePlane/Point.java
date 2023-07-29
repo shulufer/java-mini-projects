@@ -27,5 +27,10 @@ public class Point {
     this.y = y;
   }
 
+  public double distanceToOrigin() {
+    double distance;
+    distance = Math.sqrt((this.x * this.x) + (this.y * this.y));
+    return distance;
+  }
 
 }
