@@ -33,4 +33,9 @@ public class Point {
     return distance;
   }
 
+  public void move(int x1, int y1) {
+    this.x += x1;
+    this.y += y1;
+  }
+
 }
