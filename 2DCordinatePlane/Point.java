@@ -27,6 +27,15 @@ public class Point {
     this.y = y;
   }
 
+
+  @Override
+  public String toString() {
+    return "{" +
+      " x='" + getX() + "'" +
+      ", y='" + getY() + "'" +
+      "}";
+  }
+
   public double distanceToOrigin() {
     double distance;
     distance = Math.sqrt((this.x * this.x) + (this.y * this.y));
@@ -37,5 +46,6 @@ public class Point {
     this.x += x1;
     this.y += y1;
   }
+
 
 }
