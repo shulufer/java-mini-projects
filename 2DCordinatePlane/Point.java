@@ -47,5 +47,14 @@ public class Point {
     this.y += y1;
   }
 
+  public static double distanceToTwoPoints(Point point, Point point2) {
+    double distance;
+    int firstXDistance = point.getX() - point2.getX();
+    int firstYDistance = point.getY() - point2.getY();
+    distance = Math.sqrt((firstXDistance * firstXDistance) + (firstYDistance * firstYDistance));
+    return distance;
+  }
+
+
 
 }

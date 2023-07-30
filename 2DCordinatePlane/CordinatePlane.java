@@ -8,5 +8,10 @@ public class CordinatePlane {
     threeFour.move(1, 2);
     System.out.println(threeFour);
     System.out.println(threeFour.distanceToOrigin());
+
+    Point fifeTwelwe = new Point(6, 8);
+    System.out.println(Point.distanceToTwoPoints(threeFour, fifeTwelwe));
+
   }
+
 }
