@@ -6,30 +6,20 @@ public class MemoryGame {
 
     Scanner scan = new Scanner(System.in);
     System.out.println("Welcome to Memory Game.");
-    String quitOrNot = "a";
+    String quit;
+
 
     do {
-      Cards.showCards();
-
-
       Cards.firstRound();
-      Cards.showCards();
 
-      // System.out.println("Press second x");
-      // int x2 = scan.nextInt();
-      // System.out.println("Press second y");
-      // int y2 = scan.nextInt();
-      // scan.nextLine();
+      Cards.win();
 
-      // Cards.showCards();
-
-      System.out.println("Press q for quite.");
-      quitOrNot = scan.nextLine();
-    } while (quitOrNot != "q");
+      System.out.println("Press q for quit.");
+      quit = scan.nextLine();
+    } while (!quit.equals("q"));
 
 
 
-    scan.close();;
   }
 
 

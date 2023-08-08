@@ -37,10 +37,9 @@ public class Cards {
 
 
   public static void showCards(){
-
+    System.out.println("\n");
     for (int i = 0; i < backSide.length; i++) {
       for (int j = 0; j < backSide.length; j++) {
-        // String s = " " + backSide[i][j] + " ";
         System.out.print( " " + backSide[i][j] + " ");
       }
       System.out.println();
@@ -48,14 +47,72 @@ public class Cards {
   }
 
   public static void firstRound(){
+    Cards.showCards();
     Scanner scan = new Scanner(System.in);
     System.out.println("Press first x and y");
     int x1 = scan.nextInt() - 1;
     int y1 = scan.nextInt() - 1;
 
-    backSide[x1][y1]= frontSide[x1][y1];
+    if (backSide[x1][y1] == 'x') {
+      backSide[x1][y1] = frontSide[x1][y1];
+      Cards.showCards();
 
+      System.out.println("Press second x and y");
+      int x2 = scan.nextInt() - 1;
+      int y2 = scan.nextInt() - 1;
 
+      if (backSide[x2][y2] == 'x') {
+
+        backSide[x2][y2] = frontSide[x2][y2];
+
+        Cards.showCards();
+
+        if (backSide[x1][y1] == backSide[x2][y2]) {
+          System.out.println("Good job.");
+        } else {
+          backSide[x1][y1] = 'x';
+          backSide[x2][y2] = 'x';
+          System.out.println("Try again");
+        }
+      } else {
+        backSide[x1][y1] = 'x';
+        System.out.println("Wrong number.");
+      }
+
+    } else {
+      System.out.println("Wrong number.");
+    }
+  }
+
+  public static void win(){
+    Scanner scan = new Scanner(System.in);
+    if(include()){
+      System.out.println("****************");
+
+    } else {
+      System.out.println("****************");
+      System.out.println("****************");
+      System.out.println("You are the one");
+      System.out.println("****************");
+      System.out.println("****************");
+
+    }
+  }
+
+  public static boolean include(){
+    boolean isinclude = false;
+    for (int i = 0; i < backSide.length; i++) {
+      for (int j = 0; j < backSide.length; j++) {
+        if(backSide[i][j] == 'x'){
+          isinclude = true;
+          break;
+        }
+      }
+      if (isinclude == true) {
+        break;
+      }
+    }
+    return isinclude;
   }
 
 
