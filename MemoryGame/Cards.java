@@ -18,22 +18,22 @@ public class Cards {
   private static char[][] frontSide = new char[4][4];
   static {
     System.out.println("****New hand****");
-    // frontSide[0][0] = 'x';
-    // frontSide[0][1] = 'x';
-    // frontSide[0][2] = 'x';
-    // frontSide[0][3] = 'x';
-    // frontSide[1][0] = 'x';
-    // frontSide[1][1] = 'x';
-    // frontSide[1][2] = 'x';
-    // frontSide[1][3] = 'x';
-    // frontSide[2][0] = 'x';
-    // frontSide[2][1] = 'x';
-    // frontSide[2][2] = 'x';
-    // frontSide[2][3] = 'x';
-    // frontSide[3][0] = 'x';
-    // frontSide[3][1] = 'x';
-    // frontSide[3][2] = 'x';
-    // frontSide[3][3] = 'x';
+    frontSide[0][0] = 'x';
+    frontSide[0][1] = 'x';
+    frontSide[0][2] = 'x';
+    frontSide[0][3] = 'x';
+    frontSide[1][0] = 'x';
+    frontSide[1][1] = 'x';
+    frontSide[1][2] = 'x';
+    frontSide[1][3] = 'x';
+    frontSide[2][0] = 'x';
+    frontSide[2][1] = 'x';
+    frontSide[2][2] = 'x';
+    frontSide[2][3] = 'x';
+    frontSide[3][0] = 'x';
+    frontSide[3][1] = 'x';
+    frontSide[3][2] = 'x';
+    frontSide[3][3] = 'x';
 
     // while ((frontSide[0][0] != ('x')) & (frontSide[0][1] != ('x')) & (frontSide[0][2] != ('x')) & (frontSide[0][3] != ('x')) & (frontSide[1][0] != ('x')) & (frontSide[1][1] != ('x')) & (frontSide[1][2] != ('x')) & (frontSide[1][3] != ('x')) & (frontSide[2][0] != ('x')) & (frontSide[2][1] != ('x')) & (frontSide[2][2] != ('x')) & (frontSide[2][3] != ('x')) & (frontSide[3][0] != ('x')) & (frontSide[3][1] != ('x')) & (frontSide[3][2] != ('x')) & (frontSide[3][3] != ('x'))) {
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
@@ -42,270 +42,195 @@ public class Cards {
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'B';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'B';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'C';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'C';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'D';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'D';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'E';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'E';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'F';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'F';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'G';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'G';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'H';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'H';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'A';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'A';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'B';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'B';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'C';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'C';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'D';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'D';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'E';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'E';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'F';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'F';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'G';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'G';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
       if (frontSide[a = (int)(Math.random() * 4)][b = (int)(Math.random() * 4)] == 'x') {
         frontSide[a][b] = 'H';
       } else {
+        firstloop:
         for (int i = 0; i < frontSide.length; i++) {
-          int k = 0;
           for (int j = 0; j < frontSide.length; j++) {
             if (frontSide[i][j] == 'x') {
               frontSide[i][j] = 'H';
-              k = 1;
-              break;
+              break firstloop;
             }
-            if (k == 1) {
-              break;
-            }
-
           }
         }
       }
@@ -324,12 +249,12 @@ public class Cards {
       System.out.println();
     }
 
-    for (int i = 0; i < frontSide.length; i++) {
-      for (int j = 0; j < frontSide.length; j++) {
-        System.out.print( " " + frontSide[i][j] + " ");
-      }
-      System.out.println();
-    }
+    // for (int i = 0; i < frontSide.length; i++) {
+    //   for (int j = 0; j < frontSide.length; j++) {
+    //     System.out.print( " " + frontSide[i][j] + " ");
+    //   }
+    //   System.out.println();
+    // }
   }
 
   public static void firstRound(){
