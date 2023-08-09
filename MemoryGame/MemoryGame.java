@@ -6,7 +6,7 @@ public class MemoryGame {
 
     Scanner scan = new Scanner(System.in);
     System.out.println("Welcome to Memory Game.");
-    String quit;
+    // String quit;
 
 
     do {
@@ -14,9 +14,10 @@ public class MemoryGame {
 
       Cards.win();
 
-      System.out.println("Press q for quit.");
-      quit = scan.nextLine();
-    } while (!quit.equals("q"));
+      // System.out.println("Press q for quit.");
+      // quit = scan.nextLine();
+      // } while (!quit.equals("q"));
+    } while(true);
 
 
 
