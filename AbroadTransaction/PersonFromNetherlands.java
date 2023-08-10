@@ -10,7 +10,7 @@ public class PersonFromNetherlands implements PassaportTransaction{
   public PersonFromNetherlands(String name, String surname, int bsn, boolean haveVisa, boolean criminalReacord) {
     this.name = name;
     this.surname = surname;
-    if ((bsn > 999999) & (bsn < 10000000)) {
+    if ((bsn > 999_999) & (bsn < 10_000_000)) {
       this.bsn = bsn;
     }
     this.haveVisa = haveVisa;
@@ -45,21 +45,35 @@ public class PersonFromNetherlands implements PassaportTransaction{
 
 
   @Override
-  public void haveVisa() {
+  public String haveVisa() {
+    String s;
     if (haveVisa) {
-      System.out.println("You have the visa");
+      s = "You have the visa";
     } else {
-      System.out.println("You don't have visa. You can not go.");
+      s = "You don't have visa. You can not go.";
     }
+    return s;
   }
 
   @Override
-  public void criminalRecord() {
+  public String criminalRecord() {
+    String s;
     if (criminalReacord) {
-      System.out.println("You do not have criminal record. You can go");
+      s ="You do not have criminal record. You can go";
     } else {
-      System.out.println("You have criminal record. You can not go.");
+      s = "You have criminal record. You can not go.";
     }
+    return s;
+  }
+
+  public String toString() {
+    String s;
+    s = "\nName: " + name +
+        "\nsurname: " + surname +
+        "\nBSN Number: " + bsn +
+        "\n" + haveVisa() +
+        "\n" + criminalRecord();
+    return s;
   }
 
 

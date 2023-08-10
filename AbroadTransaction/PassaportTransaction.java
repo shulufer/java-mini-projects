@@ -1,4 +1,4 @@
 public interface PassaportTransaction {
-  void haveVisa();
-  void criminalRecord();
+  String haveVisa();
+  String criminalRecord();
 }
