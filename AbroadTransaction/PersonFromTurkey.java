@@ -3,9 +3,23 @@ public class PersonFromTurkey implements PassaportTransaction{
 
   private String name;
   private String surname;
-  private int citizenNumber;
+  private long citizenNumber;
   private boolean haveVisa;
   private boolean criminalReacord;
+  private long min = 9_999_999_999L;
+  private long max = 100_000_000_000L;
+
+
+  public PersonFromTurkey(String name, String surname, long citizenNumber, boolean haveVisa, boolean criminalReacord) {
+    this.name = name;
+    this.surname = surname;
+    if ((citizenNumber >  min) & (citizenNumber < max)) {
+      this.citizenNumber = citizenNumber;
+    }
+    this.haveVisa = haveVisa;
+    this.criminalReacord = criminalReacord;
+  }
+
 
 
   public String getName() {
@@ -24,7 +38,7 @@ public class PersonFromTurkey implements PassaportTransaction{
     this.surname = surname;
   }
 
-  public int getCitizenNumber() {
+  public long getCitizenNumber() {
     return this.citizenNumber;
   }
 

@@ -7,6 +7,18 @@ public class PersonFromNetherlands implements PassaportTransaction{
   private boolean criminalReacord;
 
 
+  public PersonFromNetherlands(String name, String surname, int bsn, boolean haveVisa, boolean criminalReacord) {
+    this.name = name;
+    this.surname = surname;
+    if ((bsn > 999999) & (bsn < 10000000)) {
+      this.bsn = bsn;
+    }
+    this.haveVisa = haveVisa;
+    this.criminalReacord = criminalReacord;
+  }
+
+
+
   public String getName() {
     return this.name;
   }
