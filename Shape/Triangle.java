@@ -17,8 +17,11 @@ public class Triangle  extends Shape{
 
   @Override
   public void draw() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    // System.out.println("      *       ");
+    // System.out.println("    *   *     ");
+    // System.out.println("   *      *   ");
+    // System.out.println(" *         *  ");
+    // System.out.println("* * * * * * * ");
   }
 
   @Override
@@ -29,14 +32,19 @@ public class Triangle  extends Shape{
 
   @Override
   public double calculateArea() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    double area;
+    double doubleArea;
+    double halfCircumFerence = calculateCircumference();
+    doubleArea = (halfCircumFerence) * (halfCircumFerence - a) * (halfCircumFerence - b) * (halfCircumFerence - c);
+    area = Math.sqrt(doubleArea);
+    return area;
   }
 
   @Override
   public double calculateCircumference() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateCircumference'");
+    double circumFerence;
+    circumFerence = a + b + c;
+    return circumFerence;
   }
 
 }
