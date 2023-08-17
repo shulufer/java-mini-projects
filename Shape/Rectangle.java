@@ -12,11 +12,27 @@ public class Rectangle extends Shape {
     this.b = b;
   }
 
+  public double getA() {
+    return this.a;
+  }
+
+  public void setA(double a) {
+    this.a = a;
+  }
+
+  public double getB() {
+    return this.b;
+  }
+
+  public void setB(double b) {
+    this.b = b;
+  }
+
 
   @Override
   public void draw() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    System.out.println("Rectangle");
+    System.out.println("a = " + this.getA());
   }
 
   @Override

@@ -11,11 +11,19 @@ public class Circle extends Shape {
     this.r = r;
   }
 
+  public double getR() {
+    return this.r;
+  }
+
+  public void setR(double r) {
+    this.r = r;
+  }
+
 
   @Override
   public void draw() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    System.out.println("Circle");
+    System.out.println("a = " + this.getR());
   }
 
   @Override

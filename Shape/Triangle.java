@@ -1,8 +1,11 @@
+import java.lang.Math;
+
 public class Triangle  extends Shape{
 
   double a;
   double b;
   double c;
+
 
 
   public Triangle() {
@@ -15,13 +18,37 @@ public class Triangle  extends Shape{
     this.c = c;
   }
 
+
+  public double getA() {
+    return this.a;
+  }
+
+  public void setA(double a) {
+    this.a = a;
+  }
+
+  public double getB() {
+    return this.b;
+  }
+
+  public void setB(double b) {
+    this.b = b;
+  }
+
+  public double getC() {
+    return this.c;
+  }
+
+  public void setC(double c) {
+    this.c = c;
+  }
+
   @Override
   public void draw() {
-    // System.out.println("      *       ");
-    // System.out.println("    *   *     ");
-    // System.out.println("   *      *   ");
-    // System.out.println(" *         *  ");
-    // System.out.println("* * * * * * * ");
+    System.out.println("Triangle");
+    System.out.println("a = " + this.getA());
+    System.out.println("b = " + this.getB());
+    System.out.println("c = " + this.getC());
   }
 
   @Override
@@ -34,9 +61,10 @@ public class Triangle  extends Shape{
   public double calculateArea() {
     double area;
     double doubleArea;
-    double halfCircumFerence = calculateCircumference();
+    double halfCircumFerence = (a + b + c) / 2;
     doubleArea = (halfCircumFerence) * (halfCircumFerence - a) * (halfCircumFerence - b) * (halfCircumFerence - c);
     area = Math.sqrt(doubleArea);
+
     return area;
   }
 

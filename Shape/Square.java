@@ -10,11 +10,20 @@ public class Square extends Shape {
     this.a = a;
   }
 
+  public double getA() {
+    return this.a;
+  }
+
+  public void setA(double a) {
+    this.a = a;
+  }
+
 
   @Override
   public void draw() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'draw'");
+    System.out.println("Square");
+    System.out.println("a = " + this.getA());
+
   }
 
   @Override
