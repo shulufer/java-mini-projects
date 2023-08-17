@@ -27,14 +27,16 @@ public class Recrangle extends Shape {
 
   @Override
   public double calculateArea() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    double area;
+    area = a * b;
+    return area;
   }
 
   @Override
   public double calculateCircumference() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateCircumference'");
+    double circumference;
+    circumference = 2 * (a + b);
+    return circumference;
   }
 
 }
