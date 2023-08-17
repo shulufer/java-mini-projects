@@ -1,13 +1,13 @@
-public class Recrangle extends Shape {
+public class Rectangle extends Shape {
 
   double a;
   double b;
 
 
-  public Recrangle() {
+  public Rectangle() {
   }
 
-  public Recrangle(double a, double b) {
+  public Rectangle(double a, double b) {
     this.a = a;
     this.b = b;
   }
