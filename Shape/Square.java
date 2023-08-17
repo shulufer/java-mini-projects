@@ -25,14 +25,16 @@ public class Square extends Shape {
 
   @Override
   public double calculateArea() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateArea'");
+    double area;
+    area = a * a;
+    return area;
   }
 
   @Override
   public double calculateCircumference() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'calculateCircumference'");
+    double circumference;
+    circumference = 4 * a;
+    return circumference;
   }
 
 }
