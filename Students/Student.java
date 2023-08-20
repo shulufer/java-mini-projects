@@ -9,4 +9,16 @@ public abstract class Student implements Students {
   private String major;
 
 
+
+  public Student(int no, String name, int year, Date dob, String major) {
+    this.no = no;
+    this.name = name;
+    this.year = year;
+    this.dob = dob;
+    this.major = major;
+  }
+
+
+
+
 }
