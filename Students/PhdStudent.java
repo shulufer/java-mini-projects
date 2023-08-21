@@ -1,10 +1,15 @@
-import java.util.Date;
+import java.util.Calendar.Builder;
 
 public class PhdStudent extends GraduateStudent{
 
-  public PhdStudent(int no, String name, int year, Date dob, String major) {
-    super(no, name, year, dob, major);
-    //TODO Auto-generated constructor stub
+  boolean quallifyingExamTaken;
+
+  public PhdStudent(int no, String name, int year, Builder dob, String major, String thesis, boolean quallifyingExamTaken) {
+    super(no, name, year, dob, major, thesis);
+    this.quallifyingExamTaken = quallifyingExamTaken;
+
   }
+
+
 
 }

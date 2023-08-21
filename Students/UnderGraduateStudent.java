@@ -1,13 +1,14 @@
-import java.util.Date;
+import java.util.Calendar.Builder;
 
 public class UnderGraduateStudent extends Student {
 
 
 
-  public UnderGraduateStudent(int no, String name, int year, Date dob, String major) {
+  public UnderGraduateStudent(int no, String name, int year, Builder dob, String major) {
     super(no, name, year, dob, major);
-    //TODO Auto-generated constructor stub
   }
+
+
 
   @Override
   public void study() {
