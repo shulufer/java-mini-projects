@@ -9,12 +9,61 @@ public abstract class Candidate implements PointCalculater {
     int verbalTrue;
     int verbalFalse;
     int cultureTrue;
-    int cutureFalse;
+    int cultureFalse;
     int scienceTrue;
     int scienceFalse;
-    int mathScore;
-    int verbalScore;
-    int cultureScore;
-    int scienceScore;
+    int numericalPoint;
+    int equalAgilityPoint;
+    int verbalPoint;
+    int math;
+    int culture;
+    int verbal;
+    int science;
+
+
+    public int numericalPoint() {
+      int point = (mathScore() * 5) + (verbalScore() * 3) + (culture * 1) + (science * 5);
+      return point;
+    }
+
+    public int equalAgilityPoint(){
+      int point = (math * 5) + (verbal * 5) + (culture * 3) + (science * 1);
+      return point;
+    }
+
+    public int verbalPoint() {
+      int point = (math * 3) + (verbal * 5) + (culture * 5) + (science * 1);
+      return point;
+    }
+
+    public int mathScore(){
+      math = (mathTure * 4) - mathFalse;
+      return math;
+    }
+
+    public int verbalScore(){
+      verbal = (verbalTrue * 4) - verbalFalse;
+      return verbal;
+    }
+
+    public void cultureScore(){
+      culture = (cultureTrue * 4) - cultureFalse;
+
+    }
+
+    public void scienceScore(){
+      science = (scienceTrue * 4) - scienceFalse;
+    }
+
+    public int getNumericalPoint() {
+      return numericalPoint;
+    }
+    public int getEqualAgilityPoint() {
+      return equalAgilityPoint;
+    }
+
+    public int getVerbalPoint() {
+      return verbalPoint;
+    }
 
 }

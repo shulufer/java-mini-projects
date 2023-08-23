@@ -1,7 +1,6 @@
-public class NumericalStudent extends Candidate {
+public class EqualAgilitylStudent extends Candidate {
 
-
-  public NumericalStudent(String name, int mathTure, int mathFalse, int verbalTrue, int verbalFalse , int cultureTrue, int cultureFalse, int scienceTrue, int scienceFalse) {
+  public EqualAgilitylStudent(String name, int mathTure, int mathFalse, int verbalTrue, int verbalFalse , int cultureTrue, int cultureFalse, int scienceTrue, int scienceFalse) {
     this.name = name;
     this.mathTure = mathTure;
     this.mathFalse = mathFalse;
@@ -17,12 +16,19 @@ public class NumericalStudent extends Candidate {
   public void mathScore(){
     int coefficient = 40;
     math = ((mathTure * 4) - mathFalse) + coefficient;
+
   }
 
-  public void scienceScore(){
+  public void verbalScore(){
     int coefficient = 40;
-    science = ((scienceTrue * 4) - scienceFalse) + coefficient;
+    verbal = ((verbalTrue * 4) - verbalFalse) + coefficient;
+
   }
+
+
+
+
+
 
 
 
