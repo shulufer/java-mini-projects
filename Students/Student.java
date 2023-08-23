@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Calendar.Builder;
 
 public abstract class Student implements Students {
@@ -57,7 +58,7 @@ public abstract class Student implements Students {
       " no='" + getNo() + "'" +
       ", name='" + getName() + "'" +
       ", year='" + getYear() + "'" +
-      ", dob='" + getDob() + "'" +
+      ", dob='" + getDob().build().YEAR + " " +
       ", major='" + getMajor() + "'" +
       "}";
   }
