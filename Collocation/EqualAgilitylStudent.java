@@ -13,16 +13,16 @@ public class EqualAgilitylStudent extends Candidate {
 
   }
 
-  public void mathScore(){
+  public int mathScore(){
     int coefficient = 40;
     math = ((mathTure * 4) - mathFalse) + coefficient;
-
+    return math;
   }
 
-  public void verbalScore(){
+  public int verbalScore(){
     int coefficient = 40;
     verbal = ((verbalTrue * 4) - verbalFalse) + coefficient;
-
+    return verbal;
   }
 
 

@@ -13,13 +13,15 @@ public class VerbalStudent extends Candidate{
 
   }
 
-  public void verbalScore(){
+  public int verbalScore(){
     int coefficient = 40;
     verbal = ((verbalTrue * 4) - verbalFalse) + coefficient;
+    return verbal;
   }
 
-  public void cultureScore(){
+  public int cultureScore(){
     int coefficient = 40;
     culture = ((cultureTrue * 4) - cultureFalse) + coefficient;
+    return culture;
   }
 }

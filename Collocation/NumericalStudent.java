@@ -14,14 +14,16 @@ public class NumericalStudent extends Candidate {
 
   }
 
-  public void mathScore(){
+  public int mathScore(){
     int coefficient = 40;
     math = ((mathTure * 4) - mathFalse) + coefficient;
+    return math;
   }
 
-  public void scienceScore(){
+  public int scienceScore(){
     int coefficient = 40;
     science = ((scienceTrue * 4) - scienceFalse) + coefficient;
+    return science;
   }
 
 

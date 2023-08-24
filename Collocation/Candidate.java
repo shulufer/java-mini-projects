@@ -46,13 +46,15 @@ public abstract class Candidate implements PointCalculater {
       return verbal;
     }
 
-    public void cultureScore(){
+    public int cultureScore(){
       culture = (cultureTrue * 4) - cultureFalse;
+      return culture;
 
     }
 
-    public void scienceScore(){
+    public int scienceScore(){
       science = (scienceTrue * 4) - scienceFalse;
+      return science;
     }
 
     public int getNumericalPoint() {
@@ -65,5 +67,25 @@ public abstract class Candidate implements PointCalculater {
     public int getVerbalPoint() {
       return verbalPoint;
     }
+
+
+  @Override
+  public String toString() {
+    return "{" +
+      " name='" + getName() + "'" +
+      ", numericalPoint='" + getNumericalPoint() + "'" +
+      ", equalAgilityPoint='" + getEqualAgilityPoint() + "'" +
+      ", verbalPoint='" + getVerbalPoint() + "'" +
+      "}";
+  }
+
+  private String getName() {
+    return name;
+  }
+
+  // public void allPoint(){
+
+  // }
+
 
 }
