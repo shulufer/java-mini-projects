@@ -22,6 +22,7 @@ public abstract class Candidate implements PointCalculater {
 
 
     public int numericalPoint() {
+
       int point = (mathScore() * 5) + (verbalScore() * 3) + (culture * 1) + (science * 5);
       return point;
     }
