@@ -4,6 +4,7 @@ public class ResultsCandidates {
 
     Order order = new Order();
     order.addCandidates();
+    order.calculatePoints();
 
     System.out.println("********************************");
     System.out.println(order.candidates.size());

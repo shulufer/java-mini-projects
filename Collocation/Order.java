@@ -12,7 +12,8 @@ public class Order {
   Candidate hakan5 = new EqualAgilitylStudent("hakan5", 25, 4, 20, 5, 3, 0, 25, 5);
   Candidate hakan6 = new VerbalStudent("hakan6", 30, 0, 30, 0, 30, 0, 30, 0);
   Candidate hakan7 = new EqualAgilitylStudent("hakan7", 0, 0, 0, 0, 0, 0, 0, 0);
-  {
+
+  public void calculatePoints(){
     hakan1.numericalPoint();
     hakan1.equalAgilityPoint();
     hakan1.verbalPoint();
