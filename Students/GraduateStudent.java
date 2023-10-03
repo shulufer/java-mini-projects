@@ -1,4 +1,4 @@
-import java.util.Calendar.Builder;
+import java.util.Date;
 
 public class GraduateStudent extends Student {
 
@@ -6,7 +6,7 @@ public class GraduateStudent extends Student {
   private String advisor;
   private String thesis;
 
-  public GraduateStudent(int no, String name, int year, Builder dob, String major, String thesis) {
+  public GraduateStudent(int no, String name, int year, Date dob, String major, String thesis) {
     super(no, name, year, dob, major);
     this.thesis = thesis;
   }

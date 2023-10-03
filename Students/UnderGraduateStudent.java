@@ -1,10 +1,10 @@
-import java.util.Calendar.Builder;
+import java.util.Date;
 
 public class UnderGraduateStudent extends Student {
 
 
 
-  public UnderGraduateStudent(int no, String name, int year, Builder dob, String major) {
+  public UnderGraduateStudent(int no, String name, int year, Date dob, String major) {
     super(no, name, year, dob, major);
   }
 

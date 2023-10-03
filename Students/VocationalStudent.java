@@ -1,10 +1,10 @@
-import java.util.Calendar.Builder;
+import java.util.Date;
 
 public class VocationalStudent extends Student {
 
 
 
-  public VocationalStudent(int no, String name, int year, Builder dob, String major) {
+  public VocationalStudent(int no, String name, int year, Date dob, String major) {
     super(no, name, year, dob, major);
     //TODO Auto-generated constructor stub
   }
